@@ -43,9 +43,10 @@ int32 UnrealPakViewerMain(const TCHAR* CommandLine)
 	FThreadStats::StopThread();
 #endif
 
+#if ENGINE_MAJOR_VERSION < 5
 	FTaskGraphInterface::Shutdown(); //im: ???
-
 	FEngineLoop::AppExit();
+#endif
 
 	return 0;
 }

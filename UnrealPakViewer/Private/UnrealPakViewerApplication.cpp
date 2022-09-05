@@ -55,7 +55,9 @@ void FUnrealPakViewerApplication::Exec()
 
 void FUnrealPakViewerApplication::InitializeApplication()
 {
+#if ENGINE_MAJOR_VERSION < 5
 	FCoreStyle::ResetToDefault();
+#endif
 	FUnrealPakViewerStyle::Initialize();
 
 	// Load required modules.
